@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Kana Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>日本語 Kana Learning</h1>
+            <p>Master Hiragana & Katakana</p>
+        </div>
+
+        <div class="mode-toggle">
+            <button class="mode-btn hiragana active" onclick="switchMode('hiragana')">
+                ひらがな Hiragana
+            </button>
+            <button class="mode-btn katakana" onclick="switchMode('katakana')">
+                カタカナ Katakana
+            </button>
+        </div>
+
+        <div class="card-container">
+            <div class="card" id="card" onclick="flipCard()">
+                <div class="card-face card-front">
+                    <div class="character" id="character">あ</div>
+                    <div class="hint">Click to reveal</div>
+                </div>
+                <div class="card-face card-back">
+                    <div class="romaji" id="romaji">a</div>
+                    <div class="character" id="characterBack">あ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn" onclick="prevCard()">◀</button>
+            <div class="counter">
+                <div class="counter-number" id="counter">1 / 46</div>
+                <div class="counter-label" id="modeLabel">Hiragana</div>
+            </div>
+            <button class="nav-btn" onclick="nextCard()">▶</button>
+        </div>
+
+        <div class="reset-container">
+            <button class="reset-btn" onclick="resetProgress()">
+                ↻ Start Over
+            </button>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar hiragana" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
