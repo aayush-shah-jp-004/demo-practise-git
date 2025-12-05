@@ -51,59 +51,6 @@ An interactive and beginner-friendly web app designed to help users learn Japane
  ┣ 📄 script.js
  ┗ 📄 README.md
 ```
-
----
-
-## 📸 Screenshots (Add yours here!)
-
-* Home screen UI
-* Flashcards view
-* Quiz interface
-
----
-
-## 📥 Installation & Setup
-
-### 1. Clone the repository
-
-```
-https://github.com/your-username/learn-japanese.git
-```
-
-### 2. Open the project
-
-Just open the **index.html** file in any browser.
-
----
-
-## 🌐 Deploying Your Website
-
-You can easily host it using **GitHub Pages**:
-
-1. Go to your repo settings.
-2. Scroll to **Pages**.
-3. Select branch: `main`
-4. Save → Your website goes live!
-
----
-
-## 🤝 Contributing
-
-Feel free to contribute by adding:
-
-* New lessons
-* Sound effects
-* UI improvements
-* Animations
-
----
-
-## 💬 Feedback
-
-If you have suggestions or find bugs, create an **issue** in the repository.
-
----
-
 ## ⭐ Support
 
 If you find this project helpful, consider giving it a **star** on GitHub!
