@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc 0%, #fce4ec 50%, #bbdefb 100%);
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: white;
+    color: #666;
+}
+
+.mode-btn:hover {
+    transform: scale(1.05);
+}
+
+.mode-btn.active {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+.mode-btn.hiragana.active {
+    background: #9c27b0;
+    color: white;
+}
+
+.mode-btn.katakana.active {
+    background: #e91e63;
+    color: white;
+}
+
+.card-container {
+    perspective: 1000px;
+    margin-bottom: 2rem;
+}
+
+.card {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.card-front {
+    background: white;
+}
+
+.card-back {
+    background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%);
+    transform: rotateY(180deg);
+}
+
+.character {
+    font-size: 8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-back .character {
+    color: white;
+    opacity: 0.5;
+    font-size: 3rem;
+}
+
+.romaji {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hint {
+    color: #999;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    font-size: 1.5rem;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.counter {
+    text-align: center;
+}
+
+.counter-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.counter-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.reset-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reset-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #666;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reset-btn:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+}
+
+.progress-container {
+    background: white;
+    height: 12px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.3s, background 0.3s;
+    border-radius: 50px;
+}
+
+.progress-bar.hiragana {
+    background: #9c27b0;
+}
+
+.progress-bar.katakana {
+    background: #e91e63;
+}
